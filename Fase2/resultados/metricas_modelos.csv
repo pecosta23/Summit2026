@@ -1,0 +1,5 @@
+Abordagem,MAE (pp),RMSE (pp),R2,Estados certos (de 48),Votos eleit. Landon,Voto rep. nacional (%)
+1. Pesquisa bruta (Literary Digest),18.6204,20.0573,-1.7299,18,370,56.8538
+2. Correção aditiva ingênua (erro de 1932),17.11,18.6846,-1.369,18,338,56.8591
+"3. Regressão simples, âncora em 1932",2.6223,3.1447,0.9329,48,8,38.3691
+4. Referência: só o resultado real de 1932,3.4725,4.2365,0.8782,48,8,38.3077

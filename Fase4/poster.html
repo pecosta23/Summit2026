@@ -1,0 +1,121 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Quando 2,4 milhões de respostas não bastam</title>
+<style>
+@page { size: 841mm 594mm; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { width: 841mm; height: 594mm; overflow: hidden; display: flex; flex-direction: column; background: #f5f7fa;
+  color: #1b1b1b; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 25pt; line-height: 1.32; }
+header { flex: none; background: #12294d; color: #fff; padding: 24pt 56pt 20pt; border-bottom: 11pt solid #2a78d6; }
+h1 { font-size: 78pt; line-height: 1.02; margin: 0 0 8pt; }
+.sub { font-size: 30pt; line-height: 1.2; color: #d3e0f6; margin: 0; max-width: 1900pt; }
+.meta { margin-top: 10pt; font-size: 22pt; color: #b7c9e8; }
+main { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 34pt; padding: 24pt 56pt 0; }
+.col { display: flex; flex-direction: column; gap: 18pt; min-height: 0; }
+h2 { font-size: 39pt; line-height: 1.1; margin: 0; color: #12294d; padding-left: 15pt; border-left: 11pt solid #2a78d6; }
+p { margin: 0; }
+.card { background: #fff; border: 2pt solid #dfe3ea; border-radius: 16pt; padding: 18pt 22pt; }
+.figura { background: #fff; border: 2pt solid #dfe3ea; border-radius: 16pt; padding: 14pt 18pt 12pt; }
+.figura img { width: 100%; display: block; }
+.legenda { font-size: 22pt; line-height: 1.25; color: #3b3a37; margin-top: 8pt; }
+.kpis { display: flex; gap: 16pt; }
+.tile { flex: 1; background: #fff; border: 2pt solid #dfe3ea; border-radius: 16pt; padding: 16pt 18pt 14pt; }
+.num { font-size: 66pt; font-weight: 800; line-height: 1; }
+.lbl { font-size: 21pt; line-height: 1.22; color: #52514e; margin-top: 6pt; }
+.c-pesq { color: #d9531f; } .c-real { color: #2a78d6; } .c-erro { color: #12294d; } .c-mod { color: #0f8c60; }
+.passos { display: flex; flex-direction: column; gap: 12pt; }
+.passo { display: flex; gap: 16pt; align-items: flex-start; }
+.n { flex: none; width: 46pt; height: 46pt; border-radius: 50%; background: #2a78d6; color: #fff; font-weight: 800;
+  font-size: 27pt; display: flex; align-items: center; justify-content: center; margin-top: 2pt; }
+.passo b { color: #12294d; }
+table { width: 100%; border-collapse: collapse; font-size: 21pt; }
+th { text-align: right; font-weight: 700; color: #52514e; padding: 7pt 8pt; border-bottom: 3pt solid #12294d; line-height: 1.15; }
+th:first-child, td:first-child { text-align: left; }
+td { text-align: right; padding: 8pt 8pt; border-bottom: 1.5pt solid #e3e6ec; line-height: 1.15; }
+tr.destaque td { background: #e6f5ee; font-weight: 700; color: #0b0b0b; }
+tr.ref td { color: #52514e; font-style: italic; border-bottom: 0; }
+.licoes { flex: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20pt; padding: 18pt 56pt 0; }
+.licao { background: #12294d; color: #fff; border-radius: 16pt; padding: 13pt 22pt 15pt; }
+.licao b { display: block; font-size: 26pt; line-height: 1.15; color: #fff; margin-bottom: 5pt; }
+.licao span { font-size: 21pt; line-height: 1.25; color: #d3e0f6; }
+.lim { flex: none; padding: 10pt 56pt 0; font-size: 20pt; color: #52514e; line-height: 1.28; }
+footer { flex: none; padding: 8pt 56pt 14pt; font-size: 18.5pt; color: #6b6a66; border-top: 2pt solid #dfe3ea; margin-top: 8pt; }
+</style></head><body>
+<header>
+  <h1>Quando 2,4 milhões de respostas não bastam</h1>
+  <p class="sub">O erro da Literary Digest em 1936: diagnóstico de viés e correção por regressão linear com âncora em 1932</p>
+  <p class="meta">[Nome da equipe e integrantes: preencher] · Universidade de Mogi das Cruzes (UMC) · Summit UMC</p>
+</header>
+
+<main>
+  <!-- COLUNA 1: contexto e método -->
+  <section class="col">
+    <h2>1. O caso de 1936</h2>
+    <div class="card">
+      <p>A revista <i>The Literary Digest</i> enviou <b>10 milhões</b> de cartões e recebeu
+      <b>2,4 milhões</b> de respostas. Previu a vitória de Landon, mas
+      <b>Roosevelt venceu com 62%</b> dos votos e a revista faliu.
+      Nosso papel: cientistas de dados forenses.</p>
+    </div>
+    <div class="kpis">
+      <div class="tile"><div class="num c-pesq">57,1%</div><div class="lbl">Landon segundo a pesquisa</div></div>
+      <div class="tile"><div class="num c-real">37,5%</div><div class="lbl">Landon nas urnas</div></div>
+      <div class="tile"><div class="num c-erro">+19,6</div><div class="lbl">pontos percentuais de erro</div></div>
+    </div>
+    <div class="card">
+      <p>A pesquisa deu <b>370 votos eleitorais</b> a Landon; ele obteve <b>8</b>. Errou o vencedor em
+      <b>30 de 48 estados</b> e superestimou Landon em <b>48 de 48</b>.</p>
+    </div>
+
+    <h2>2. Dados e método</h2>
+    <div class="card passos">
+      <div class="passo"><div class="n">1</div><p><b>Limpeza (Pandas).</b> 48 estados, 4 blocos unidos pelo nome do estado, traços tratados e totais conferidos.</p></div>
+      <div class="passo"><div class="n">2</div><p><b>Exploração (NumPy).</b> Voto republicano entre os dois partidos; erro = pesquisa − real.</p></div>
+      <div class="passo"><div class="n">3</div><p><b>Diagnóstico de viés.</b> O “voto em 1932” dos respondentes contra o resultado real de 1932.</p></div>
+      <div class="passo"><div class="n">4</div><p><b>Modelo (Scikit-Learn).</b> Regressão linear simples: erro de 1936 = a + b · viés de 1932. Validação leave-one-out.</p></div>
+    </div>
+  </section>
+
+  <!-- COLUNA 2: diagnóstico -->
+  <section class="col">
+    <h2>3. Diagnóstico de viés</h2>
+    <div class="figura"><img src="figuras/p1_comparacao.png" alt="Pesquisa e resultado real em 1932 e 1936">
+      <p class="legenda"><b>Em 1932 a pesquisa acertou</b> (erro de 0,7 pp). <b>Em 1936, errou por 19,6 pp.</b></p></div>
+    <div class="kpis">
+      <div class="tile"><div class="num c-pesq">51,4%</div><div class="lbl">dos respondentes diziam ter votado em Hoover em 1932…</div></div>
+      <div class="tile"><div class="num c-real">40,9%</div><div class="lbl">…contra a votação real: <b>viés de amostragem de 10,6 pp</b></div></div>
+    </div>
+    <div class="figura"><img src="figuras/p2_vies.png" alt="Viés da amostra e erro por estado">
+      <p class="legenda">Cada ponto é um estado: <b>quanto mais republicana a amostra em 1932, maior o erro em 1936</b> (r = 0,91).</p></div>
+    <div class="card">
+      <p><b>Não-resposta:</b> só <b>23,8%</b> dos cartões voltaram; os outros 76% teriam de ser
+      <b>25,7 pp menos republicanos</b> que quem respondeu (cenário hipotético).</p>
+    </div>
+  </section>
+
+  <!-- COLUNA 3: correção -->
+  <section class="col">
+    <h2>4. Correção com âncora em 1932</h2>
+    <div class="figura"><img src="figuras/p3_antes_depois.png" alt="Antes e depois da correção">
+      <p class="legenda">Cada ponto é um estado. Modelo: <b>erro de 1936 = 9,0 pp + 0,99 × viés de 1932</b>; previsão corrigida = pesquisa − erro previsto.</p></div>
+    <div class="card">
+      <table>
+        <tr><th>Abordagem</th><th>Erro médio<br>(pp)</th><th>Estados<br>certos</th><th>Votos<br>Landon</th><th>Landon<br>no país</th></tr>
+        <tr><td>Pesquisa bruta</td><td>18,6</td><td>18/48</td><td>370</td><td>56,9%</td></tr><tr><td>Correção ingênua (1932)</td><td>17,1</td><td>18/48</td><td>338</td><td>56,9%</td></tr><tr class="destaque"><td>Regressão com âncora</td><td>2,6</td><td>48/48</td><td>8</td><td>38,4%</td></tr><tr><td>Só o real de 1932</td><td>3,5</td><td>48/48</td><td>8</td><td>38,3%</td></tr>
+        <tr class="ref"><td>Resultado real</td><td>–</td><td>–</td><td>8</td><td>37,5%</td></tr>
+      </table>
+      <p class="legenda">Regressão e referência: previsões estado a estado por validação leave-one-out.</p>
+    </div>
+    <div class="tile"><div class="num c-mod">−86%</div>
+      <div class="lbl">no erro médio por estado: de 18,6 para <b>2,6 pp</b>, e o vencedor certo em 48 de 48 estados.</div></div>
+  </section>
+</main>
+
+<div class="licoes">
+  <div class="licao"><b>Volume não é representatividade</b><span>2,4 milhões de respostas e 20 pontos de erro: mais dados do mesmo viés não o corrigem.</span></div>
+  <div class="licao"><b>Quem falta nos dados é mal previsto</b><span>Crédito, saúde e reconhecimento facial treinados com populações pouco diversas correm o mesmo risco.</span></div>
+  <div class="licao"><b>Use uma âncora externa</b><span>Comparar a amostra com um resultado conhecido (aqui, 1932) revelou o viés e permitiu corrigi-lo.</span></div>
+  <div class="licao"><b>Documente e audite</b><span>Medir cobertura, auditar por grupo e reportar limitações são deveres éticos da engenharia de dados.</span></div>
+</div>
+<p class="lim"><b>Limitações:</b> 48 estados; voto de 1932 autodeclarado; validação entre estados (não é previsão ao vivo); só o real de 1932, sem pesquisa, já erra 3,5 pp: o ganho de usar a pesquisa é real, porém moderado.</p>
+<footer>Universidade de Mogi das Cruzes (UMC) · LaBiOmicS · Hackathon de Ciência de Dados · Summit UMC · Dados: LitDigestFull.xlsx · Código: Fase1/main.ipynb, Fase2/modelo_correcao.py</footer>
+</body></html>
